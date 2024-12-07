@@ -10,7 +10,7 @@ function generateContent() {
     chefSection.className = 'info-section';
     chefSection.innerHTML = `
     <img src="./assets/images/Chef.jpg" alt="Chef image">
-    <div class="info>
+    <div class="info">
        <p><strong>Chef Chidi Okonkwo</strong>
        is a master of Igbo culinary traditions with over a decade of experience in crafting authentic dishes that celebrate the rich heritage of Nigeria. 
        Born and raised in Enugu, Chef Chidi grew up learning the secrets of Igbo cooking from family elders, perfecting time-honored recipes like nkwobi and ofe nsala. 
@@ -41,6 +41,7 @@ function generateContent() {
         "Seasonal and Holiday Menu Specials",
         "Food Tasting Events and Pairings"
     ];
+    
     const serviceSection = document.createElement('section')
     serviceSection.className = 'services';
     serviceSection.innerHTML = `
