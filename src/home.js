@@ -3,7 +3,7 @@ import './home.css';
 
 // function to generate content
 function generateContent() {
-    const dynamicContent = document.querySelector('dynamic-content');
+    const dynamicContent = document.querySelector('.dynamic-content');
     
     // Create content for the chef & restaurant information
     const chefSection = document.createElement('section');
@@ -26,6 +26,7 @@ function generateContent() {
        </p>
     </div>
     `;
+    dynamicContent.appendChild(chefSection);
 
     // Create an array for the services render
     const services = [
@@ -41,10 +42,21 @@ function generateContent() {
         "Food Tasting Events and Pairings"
     ];
     const serviceSection = document.createElement('section')
-    serviceSection.className = 'service';
+    serviceSection.className = 'services';
     serviceSection.innerHTML = `
     <h2>Service we Render</h2>
     <div class="service-list"></div>
     `;
+    dynamicContent.appendChild(serviceSection);
+
+    // Populate Services using divs
+    const serviceList = document.querySelector('.service-list');
+    services.forEach(service => {
+        const serviceDiv = document.createElement('div');
+        serviceDiv.classList.add('service-item');
+        serviceDiv.textContent = service;
+        serviceList.appendChild(serviceDiv);
+    });
 
 }
+export default generateContent;
