@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
@@ -8,6 +9,14 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+    },
+    devtool: 'eval-source-map',
+    devServer: {
+        static: './src',
+        watchFiles: ['./src/home.html', './src/menu.html'],
+        open: true,
+        hot: true,
+        port: 8080
     },
 
     plugins: [
