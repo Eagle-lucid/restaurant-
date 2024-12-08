@@ -7,15 +7,18 @@
     box-sizing: border-box;
 }
 :root {
-    /*Background color*/
-    --header-bg-crl: rgba(253, 3, 3, 0.808);
-    --footer-bg-crl: rgba(0, 0, 0, 0.781);
-    --secondary-crl: rgba(255, 255, 255, 0.692);
+    /* Color*/
+    --header-bg-crl: hsla(0, 98%, 50%, 0.945);
+    --footer-bg-crl: hsla(0, 0%, 0%, 0.781);
+    --secondary-crl: hsla(0, 0%, 100%, 0.692);
+    --button-bg-crl: hsla(0, 98%, 50%, 0.945);
+    --button-txt-crl: hsl(0, 0%, 100%);
+    --grl-txt-crl: hsla(0, 0%, 0%, 0.863);
 
     /* Font size*/
     --base-font-size: 1rem;
-    --font-size-h: 1.5rem;
-    --font-size-xh: 2rem;
+    --font-size-xh: 1.5rem;
+    --font-size-xxh: 2rem;
 
     /* Font Style*/
     --logo-font-family: 'Baloo Bhai 2', sans-serif;
@@ -25,15 +28,74 @@
     /* Border radius*/
     --border-radius: 10px;
     --border-radius-large: 15px;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
     
     /* Transition */
     --transition-speed: 0.3s;
     --transition-easing: ease-in-out;
 
      /* Spacing */
-     --space-small: 0.5rem;
-     --space-medium: 1rem;
+     --space-smallest: 0.3rem;
+     --space-small: 1rem;
+     --space-medium: 1.5rem;
      --space-large: 2rem;
 
+}
+
+header{
+    background-color: var(--header-bg-crl);
+    padding: var(--space-medium);
+    margin: 0;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color var(--transition-speed) var(--transition-easing);
+}
+header > nav .logo-name {
+    color: hsl(51, 100%, 50%);
+    font-size: clamp(2rem, 1.5vw, 3rem);
+    font-family: var(--logo-font-family);
+    text-shadow: 0 0 10px hsla(51, 100%, 50%, 0.685), 0 0 20px hsla(51, 100%, 50%, 0.6);
+    letter-spacing: 0.5rem;
+}
+nav > .nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--space-medium);
+    flex-wrap: wrap;
+    padding: 10px;
+}
+/* For smaller screens, convert the nav-list to columns*/
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--space-small);
+    }
+}
+.nav-list > button {
+    border: none;
+    outline: none;
+    padding: 5px;
+    background-color: var(--button-bg-crl);
+    color: var(--button-txt-crl);
+    font-size: var(--base-font-size);
+    font-family: var(--heading-font-family);
+    letter-spacing: var(--space-smallest);
+    text-shadow: 0 0 10px hsla(0, 0%, 0%, 0.815), 0 0 20px hsla(0, 0%, 0%, 0.801);
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+.nav-list > button:hover {
+    color: hsla(0, 0%, 0%, 0.801);
+    text-shadow: 0 0 10px hsla(0, 0%, 100%, 0.945), 0 0 20px hsla(0, 0%, 100%, 0.911);
+    transform: scale(1.1);
+}
+.nav-list > button:active {
+    color: hsl(43, 74%, 49%);
+    text-shadow: 0 0 10px hsla(0, 0%, 0%, 0.952), 0 0 20px hsla(0, 0%, 0%, 0.952);
+    transform: scale(0.95);  
 }
