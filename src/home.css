@@ -13,7 +13,7 @@
     --secondary-crl: hsla(0, 0%, 100%, 0.692);
     --button-bg-crl: hsla(0, 98%, 50%, 0.945);
     --button-txt-crl: hsl(0, 0%, 100%);
-    --grl-txt-crl: hsla(0, 0%, 0%, 0.863);
+    --grl-txt-crl: hsla(0, 0%, 100%, 0.863);
 
     /* Font size*/
     --base-font-size: 1rem;
@@ -41,7 +41,7 @@
      --space-large: 2rem;
 
 }
-
+/* Header section style...*/
 header{
     background-color: var(--header-bg-crl);
     padding: var(--space-medium);
@@ -72,9 +72,6 @@ nav > .nav-list {
 @media (max-width: 768px) {
     .nav-list {
         flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        gap: var(--space-small);
     }
 }
 .nav-list > button {
@@ -97,5 +94,61 @@ nav > .nav-list {
 .nav-list > button:active {
     color: hsl(43, 74%, 49%);
     text-shadow: 0 0 10px hsla(0, 0%, 0%, 0.952), 0 0 20px hsla(0, 0%, 0%, 0.952);
-    transform: scale(0.95);  
+    transform: scale(0.95); 
+    text-decoration: line-through; 
+}
+/* Section for the information of the chef & restaurant*/
+.info-section {
+   display: flex;
+   align-items: center;
+   gap: var(--space-medium); 
+   background-color: var(--secondary-crl);
+}
+.info-section img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    max-height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 7.5px 0 0 15%;
+}
+.info-section .info {
+    flex: 1;
+}
+.info-section .info > p {
+    border: 1px solid black;
+    padding: var(--space-smallest);
+    margin: 5px auto;
+    max-width: 530px;
+    font-size: var(--base-font-size);
+    font-family: var(--body-font-family);
+    color: var(--grl-txt-crl);
+    background-color: hsl(0, 8%, 9%);
+    border-radius: var(--border-radius);
+}
+.info p > strong {
+    color: hsla(43, 74%, 49%, 0.918);
+    text-decoration: underline;
+}
+.info p > em {
+    color: hsl(0, 100%, 50%);
+}
+/* For smaller image stack the image and text vertically*/
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        gap: var(--space-small);
+        text-align: center;
+        margin: 0 5px;
+
+    }
+    .info-section img {
+        max-height: 200px; 
+        max-width: 200px;
+        margin: 5px auto;
+    }
+    .info-section .info > p {
+        margin: 5px auto;
+    }
 }
