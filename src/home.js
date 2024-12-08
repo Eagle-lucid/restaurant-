@@ -41,11 +41,11 @@ function generateContent() {
         "Seasonal and Holiday Menu Specials",
         "Food Tasting Events and Pairings"
     ];
-    
+
     const serviceSection = document.createElement('section')
     serviceSection.className = 'services';
     serviceSection.innerHTML = `
-    <h2>Service we Render</h2>
+    <h2>Services We Offer</h2>
     <div class="service-list"></div>
     `;
     dynamicContent.appendChild(serviceSection);
