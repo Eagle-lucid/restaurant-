@@ -44,6 +44,7 @@ function generateContent() {
 
     const serviceSection = document.createElement('section')
     serviceSection.className = 'services';
+    serviceSection.id = 'service';
     serviceSection.innerHTML = `
     <h2>Services We Offer</h2>
     <div class="service-list"></div>
@@ -61,3 +62,12 @@ function generateContent() {
 
 }
 export default generateContent;
+
+// Function to scroll to section by ID
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+scrollToSection;
