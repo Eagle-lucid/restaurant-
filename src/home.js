@@ -61,7 +61,7 @@ function generateContent() {
     });
 
 }
-export default generateContent;
+
 
 // Function to scroll to section by ID
 function scrollToSection(sectionId) {
@@ -71,3 +71,8 @@ function scrollToSection(sectionId) {
     }
 }
 scrollToSection;
+// Function to navigate to menu
+function navigateToMenu() {
+    window.location.href = './menu.html';
+}
+export {generateContent, navigateToMenu};
