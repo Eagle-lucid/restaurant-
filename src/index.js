@@ -1,5 +1,5 @@
-//generate content and navigate globally
-import  {generateContent, navigateToMenu} from "./home.js";
+// Generate content and navigate globally
+import { generateContent, navigateToMenu } from "./home.js";
 generateContent();
 window.navigateToMenu = navigateToMenu;
 
@@ -10,3 +10,7 @@ window.scrollToSection = function(sectionId) {
         section.scrollIntoView({ behavior: 'smooth' });
     }
 };
+
+// Import functions from menu.js
+import { navigateToHome, generateMenuList } from "./menu.js";
+generateMenuList();
