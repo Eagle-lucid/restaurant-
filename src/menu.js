@@ -7,8 +7,12 @@ function navigateToHome() {
 
 // Function to generate the Menu list
 function generateMenuList() {
-    const menuContent = document.getElementById('menuList')
-    
+    const menuContent = document.getElementById('menuList');
+    // Check if the menuList element exit
+    if(!menuContent) {
+        console.error("Element with ID 'menuList' not found in the DOM.");
+        return;
+    }
     // Creating an array for menu items with images
     const menu = [
         {
@@ -118,6 +122,7 @@ function generateMenuList() {
         menuContent.appendChild(sectionDiv);
     });
 };  
-
+// Ensure that the menu generated after the DOM is loaded 
+document.addEventListener('DOMContentLoaded', generateMenuList);
 // Export  function to entrypoint
 export {navigateToHome, generateMenuList}
