@@ -38,3 +38,12 @@ The homepage for *Lucid Cuisine* is designed to introduce visitors to the restau
 
 - **Content Expansion**: As more content is added, the scrolling behavior will improve, and the homepage will feel more dynamic and engaging.
 - **Enhanced Visual Design**: Once more sections and visual elements are in place, further optimization can be done to enhance the user experience.
+
+
+## Development Notes
+
+- **Dynamic Menu Rendering**: 
+  The menu items on the `menu.html` page are dynamically rendered using JavaScript. To ensure proper functionality, the `generateMenuList` function is called only after the DOM is fully loaded. This is achieved using the `DOMContentLoaded` event listener in `menu.js`.
+
+  ```javascript
+  document.addEventListener('DOMContentLoaded', generateMenuList);
