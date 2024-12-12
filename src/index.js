@@ -12,5 +12,5 @@ window.scrollToSection = function(sectionId) {
 };
 
 // Import functions from menu.js
-import { navigateToHome, generateMenuList } from "./menu.js";
+import { generateMenuList } from "./menu.js";
 generateMenuList();
