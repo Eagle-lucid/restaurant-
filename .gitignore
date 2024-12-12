@@ -1,0 +1,7 @@
+# Final version after resolving conflict
+node_modules/
+dist/
+*.log
+.env
+.vscode/
+some-other-entry
