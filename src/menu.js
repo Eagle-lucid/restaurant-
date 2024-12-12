@@ -1,9 +1,5 @@
 //Import menu style
 import './menu.css';
-// function to navigate to homepage
-function navigateToHome() {
-    window.location.href = './home.html';
-}
 
 // Function to generate the Menu list
 function generateMenuList() {
@@ -75,6 +71,12 @@ function generateMenuList() {
                     description: 'A spicy, aromatic soup made with meats or fish, and flavored with local herbs.',
                     price: '$12',
                     image: './assets/images/pepper-soup.jpg'
+                },
+                {
+                    name: 'Moi Moi',
+                    description: 'Steamed ground bean pudding, a savory and nutritious side dish.',
+                    price: '$6',
+                    image: './assets/images/moi-moi.jpg'
                 }
             ]
         },
@@ -92,6 +94,12 @@ function generateMenuList() {
                     description: 'A sweet and tangy drink made from dried hibiscus petals, popular in West Africa.',
                     price: '$5',
                     image:'./assets/images/zobo.jpg'
+                },
+                {
+                    name: 'Fanta',
+                    description: 'A refreshing carbonated citrus drink.',
+                    price: '$3',
+                    image: './assets/images/fanta.jpg'
                 }
             ]
         }
@@ -124,5 +132,6 @@ function generateMenuList() {
 };  
 // Ensure that the menu generated after the DOM is loaded 
 document.addEventListener('DOMContentLoaded', generateMenuList);
+
 // Export  function to entrypoint
-export {navigateToHome, generateMenuList}
+export {generateMenuList};
