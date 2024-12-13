@@ -87,13 +87,13 @@ function generateMenuList() {
                     name: 'Chapman',
                     description: 'A popular Nigerian cocktail made with soft drink, grenadine, and bitters.',
                     price: '$12',
-                    image: './assets/images/Chapman.jpg'
+                    image: './assets/images/chapman.jpg'
                 },
                 {
                     name: 'Zobo',
                     description: 'A sweet and tangy drink made from dried hibiscus petals, popular in West Africa.',
                     price: '$5',
-                    image:'./assets/images/Zobo.jpg'
+                    image:'./assets/images/zobo.jpg'
                 },
                 {
                     name: 'Fanta',
